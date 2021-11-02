@@ -1,3 +1,21 @@
 [submodule "ArduinoCore-samd"]
 	path = ArduinoCore-samd
 	url = https://github.com/Seeed-Studio/ArduinoCore-samd
+[submodule "seeedlibs/Seeed_Arduino_rpcUnified"]
+	path = seeedlibs/Seeed_Arduino_rpcUnified
+	url = https://github.com/Seeed-Studio/Seeed_Arduino_rpcUnified
+[submodule "seeedlibs/Seeed_Arduino_rpcWiFi"]
+	path = seeedlibs/Seeed_Arduino_rpcWiFi
+	url = https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFi
+[submodule "seeedlibs/Seeed_Arduino_mbedtls"]
+	path = seeedlibs/Seeed_Arduino_mbedtls
+	url = https://github.com/Seeed-Studio/Seeed_Arduino_mbedtls
+[submodule "seeedlibs/Seeed_Arduino_FS"]
+	path = seeedlibs/Seeed_Arduino_FS
+	url = https://github.com/Seeed-Studio/Seeed_Arduino_FS
+[submodule "seeedlibs/Seeed_Arduino_SFUD"]
+	path = seeedlibs/Seeed_Arduino_SFUD
+	url = https://github.com/Seeed-Studio/Seeed_Arduino_SFUD
+[submodule "seeedlibs/Seeed_Arduino_rpcBLE"]
+	path = seeedlibs/Seeed_Arduino_rpcBLE
+	url = https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE
