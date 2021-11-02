@@ -10,6 +10,7 @@ execute_process(
 
 execute_process(
     COMMAND ${CMAKE_COMMAND}
+    -DREPO=ArduinoCore-samd
     -DROOT=${CMAKE_CURRENT_LIST_DIR}/ArduinoCore-samd
     -DPATH=libraries
     -DTYPE=lib
