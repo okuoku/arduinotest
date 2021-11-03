@@ -19,3 +19,9 @@
 [submodule "seeedlibs/Seeed_Arduino_rpcBLE"]
 	path = seeedlibs/Seeed_Arduino_rpcBLE
 	url = https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE
+[submodule "ArduinoModule-CMSIS-Atmel"]
+	path = ArduinoModule-CMSIS-Atmel
+	url = https://github.com/arduino/ArduinoModule-CMSIS-Atmel
+[submodule "ArduinoModule-CMSIS"]
+	path = ArduinoModule-CMSIS
+	url = https://github.com/arduino/ArduinoModule-CMSIS
