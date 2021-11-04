@@ -88,3 +88,8 @@ add_library(ArduinoCore STATIC
 add_executable(target blink.cpp)
 target_link_libraries(target ArduinoCore)
 
+add_custom_command(TARGET target POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY}
+    -O binary $<TARGET_FILE:target> $<TARGET_FILE:target>.bin)
+
+
