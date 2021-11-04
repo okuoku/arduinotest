@@ -24,6 +24,12 @@ foreach(l ${libs})
     include_directories(${arduinolib_${l}_incs})
 endforeach()
 
+set(CMAKE_C_FLAGS "-g -Os -std=gnu11")
+set(CMAKE_CXX_FLAGS "-g -Os -std=gnu++11 -fno-exceptions -fno-rtti")
+set(CMAKE_EXE_LINKER_FLAGS
+    "-Wl,-T -Wl,${CMAKE_CURRENT_LIST_DIR}/ArduinoCore-samd/variants/wio_terminal/linker_scripts/gcc/flash_with_bootloader.ld -Wl,--gc-sections -fuse-ld=bfd -Wl,-Map,out.map"
+    )
+
 # Defs
 add_definitions(
     -D__SAMD51P19A__ 
@@ -75,6 +81,10 @@ foreach(l ${libs})
     add_library(${l} STATIC ${arduinolib_${l}_srcs})
 endforeach()
 
-add_library(ArduinoCore STATIC ${arduinolib_core_srcs})
+add_library(ArduinoCore STATIC 
+    ArduinoCore-samd/variants/wio_terminal/variant.cpp
+    ${arduinolib_core_srcs})
 
+add_executable(target blink.cpp)
+target_link_libraries(target ArduinoCore)
 
