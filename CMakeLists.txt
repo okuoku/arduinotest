@@ -92,4 +92,7 @@ add_custom_command(TARGET target POST_BUILD
     COMMAND ${CMAKE_OBJCOPY}
     -O binary $<TARGET_FILE:target> $<TARGET_FILE:target>.bin)
 
+add_custom_target(write
+    COMMAND ${CMAKE_COMMAND} -DBIN=$<TARGET_FILE:target>.bin
+    -P ${CMAKE_CURRENT_LIST_DIR}/run_write.cmake)
 
